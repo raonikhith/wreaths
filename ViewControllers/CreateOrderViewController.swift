@@ -8,7 +8,7 @@
 
 import UIKit
 import ValueStepper
-
+import SwiftyJSON
 
 class CreateOrderViewController: BaseViewController {
     
@@ -16,8 +16,9 @@ class CreateOrderViewController: BaseViewController {
     @IBOutlet weak var productsList: UITableView!
     
     //Variable Declaration's
-    var products = Array<Any>()
-    
+    var products = [JSON]()
+    var roundButton = UIButton()
+    var qty = [Int]()
     
 
     override func viewDidLoad() {
@@ -25,6 +26,9 @@ class CreateOrderViewController: BaseViewController {
         self.title = "Create Order"
         
         get_products()
+        
+        show_checkout_button()
+        roundButton.isHidden = true
         
        
     }
@@ -38,7 +42,7 @@ class CreateOrderViewController: BaseViewController {
         } else {
             for document in snapshot!.documents {
                 
-                self.products.append(document.data())
+                self.products.append(JSON(document.data()))
             }
             print(self.products)
         self.productsList.reloadData()
@@ -52,54 +56,75 @@ class CreateOrderViewController: BaseViewController {
 
         if let indexPath = productsList.indexPathForRow(at: buttonPostion) {
             let rowIndex =  indexPath.row
-            if sender.value==0
-            {
-               
-                
-            }
-            else
-            {
-                self.cartObjects.append(products[rowIndex] as! [String : Any])
-            }
+            cart_add_objects(sender: sender, rowIndex:rowIndex)
         }
         
-        if self.cartObjects.count>0
+        show_hide_checkout_button()
+   
+    }
+    
+    
+    func cart_add_objects(sender:ValueStepper,rowIndex:Int)
+    {
+        if sender.value==0
         {
-            show_checkout_button(show:true)
+            qty.remove(at:self.cartObjects.indexOf(x:products[rowIndex])!)
+            self.cartObjects.remove(element:products[rowIndex])
         }
         else
         {
-            show_checkout_button(show:false)
+            
+            if self.cartObjects.contains(products[rowIndex])
+            {
+                qty[self.cartObjects.indexOf(x:products[rowIndex])!] = Int(sender.value)
+            }
+            else
+            {
+            qty.append(Int(sender.value))
+            self.cartObjects.append(products[rowIndex])
+            }
         }
-        
+    }
+    
+    
+    func  show_hide_checkout_button()
+    {
+           if self.cartObjects.count>0
+           {
+               roundButton.isHidden = false
+           }
+           else
+           {
+               roundButton.isHidden = true
+           }
     }
     
  
-    
-    
-    func show_checkout_button(show:Bool)
+    func show_checkout_button()
     {
         
-        let roundButton = UIButton(type: .custom)
+        roundButton = UIButton(type: .custom)
         roundButton.frame = CGRect(x:self.view.bounds.size.width-80,y:self.view.bounds.size.height-100, width:60, height:60)
         roundButton.setImage(UIImage(named:"arrow.png"), for:.normal)
         roundButton.backgroundColor = UIColor.orange
         roundButton.layer.cornerRadius = 60/2
         roundButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-            self.view.addSubview(roundButton)
-        if show
-        {
-            roundButton.isHidden = false
-        }
-        else
-        {
-            roundButton.isHidden = true
-        }
+        self.view.addSubview(roundButton)
         
     }
+   @objc func buttonAction(sender: UIButton!)
+   {
+    for i in 0..<qty.count
+    {
+        self.cartObjects[i].dictionaryObject!["Qty"] = qty[i]
+    }
+    print(self.cartObjects.count)
+    self.performSegue(withIdentifier:"cartSegue", sender:nil)
+    }
     
-   @objc func buttonAction(sender: UIButton!) {
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! CartViewController
+        vc.cartObjects = self.cartObjects
     }
     
     
@@ -118,9 +143,9 @@ extension CreateOrderViewController:UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier:"prCell") as! ProductTableViewCell
-        let product = self.products[indexPath.row] as! [String:Any]
-        cell.pNameLbl.text = product["pName"] as? String
-        cell.priceLbl.text = "$ \(product["Price"] as! String)"
+        let product = self.products[indexPath.row]
+        cell.pNameLbl.text = product["pName"].stringValue
+        cell.priceLbl.text = "$ \(product["Price"].stringValue)"
         cell.selectionStyle = .none
         return cell
         

@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SwiftyJSON
 
 class BaseViewController: UIViewController {
 
@@ -15,11 +16,11 @@ class BaseViewController: UIViewController {
     let db = Firestore.firestore()
 
     //document reference value
-     var ref: DocumentReference? = nil
+    var ref: DocumentReference? = nil
     //userData object
      var userData = [String:Any]()
     //cart Objects
-    var cartObjects = [[String:Any]]()
+    var cartObjects = [JSON]()
     //cart Object
     var cart = [String:Any]()
     
