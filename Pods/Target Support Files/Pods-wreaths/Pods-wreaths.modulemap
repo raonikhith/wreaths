@@ -1,0 +1,6 @@
+framework module Pods_wreaths {
+  umbrella header "Pods-wreaths-umbrella.h"
+
+  export *
+  module * { export * }
+}

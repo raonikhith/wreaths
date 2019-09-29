@@ -1,0 +1,6 @@
+framework module Pods_wreathsTests {
+  umbrella header "Pods-wreathsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
