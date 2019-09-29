@@ -23,6 +23,7 @@
 		A5BEB601233FB0E1003C454E /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BEB600233FB0E1003C454E /* CartViewController.swift */; };
 		A5BEB603233FB0FA003C454E /* CheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BEB602233FB0FA003C454E /* CheckOutViewController.swift */; };
 		A5BEB606233FB4DC003C454E /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A5BEB605233FB4DC003C454E /* arrow.png */; };
+		A5BEB608233FFF85003C454E /* CreateOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BEB607233FFF85003C454E /* CreateOrderTableViewCell.swift */; };
 		A5FDE5C9233B46790030D90D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDE5C8233B46790030D90D /* BaseViewController.swift */; };
 		A5FDE5CB233B73530030D90D /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDE5CA233B73530030D90D /* DashBoardViewController.swift */; };
 		A5FDE5CD233B9BDF0030D90D /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDE5CC233B9BDF0030D90D /* EdgeInsetLabel.swift */; };
@@ -73,6 +74,7 @@
 		A5BEB600233FB0E1003C454E /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		A5BEB602233FB0FA003C454E /* CheckOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutViewController.swift; sourceTree = "<group>"; };
 		A5BEB605233FB4DC003C454E /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		A5BEB607233FFF85003C454E /* CreateOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderTableViewCell.swift; sourceTree = "<group>"; };
 		A5FDE5C8233B46790030D90D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A5FDE5CA233B73530030D90D /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
 		A5FDE5CC233B9BDF0030D90D /* EdgeInsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetLabel.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				A5FDE5D1233B9F0C0030D90D /* ProductTableViewCell.swift */,
+				A5BEB607233FFF85003C454E /* CreateOrderTableViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				A5FDE5C9233B46790030D90D /* BaseViewController.swift in Sources */,
 				A5FDE5CF233B9D740030D90D /* CreateOrderViewController.swift in Sources */,
 				A5BEB601233FB0E1003C454E /* CartViewController.swift in Sources */,
+				A5BEB608233FFF85003C454E /* CreateOrderTableViewCell.swift in Sources */,
 				A5FDE5D2233B9F0C0030D90D /* ProductTableViewCell.swift in Sources */,
 				A5A5A1B5233671E20060FD01 /* LoginViewController.swift in Sources */,
 				A5A5A1B7233672AF0060FD01 /* ShadowButton.swift in Sources */,

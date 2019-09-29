@@ -117,6 +117,7 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.9.0)
+  - SwiftyJSON (4.3.0)
   - ValueStepper (1.6)
 
 DEPENDENCIES:
@@ -124,6 +125,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
   - IQKeyboardManagerSwift
+  - SwiftyJSON (~> 4.0)
   - ValueStepper
 
 SPEC REPOS:
@@ -149,6 +151,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
+    - SwiftyJSON
     - ValueStepper
 
 SPEC CHECKSUMS:
@@ -173,8 +176,9 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   ValueStepper: 8b120c72c8d1391cd874a427485e2e57fda1a0b9
 
-PODFILE CHECKSUM: 0d128a71008e46f6c669b05af95ad4f047e10d9c
+PODFILE CHECKSUM: 16e6c22ced81b34cd7e536b9eff75260a8dfb4fd
 
 COCOAPODS: 1.7.5

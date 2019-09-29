@@ -23,5 +23,5 @@ pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'IQKeyboardManagerSwift'
 pod 'ValueStepper'
-
+pod 'SwiftyJSON', '~> 4.0'
 end
