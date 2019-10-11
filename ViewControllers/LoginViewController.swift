@@ -17,7 +17,9 @@ class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        emailTF.text = "samin@yahoo.com"
+        passwordTF.text = "test"
+       // self.view.addBackgroundImage(imgUrl: "arrow.png", placeHolder: "placeHolderName")
     }
     
     
@@ -39,8 +41,9 @@ class LoginViewController: BaseViewController {
                 self.userData["dID"] = document.documentID
                 UserDefaults.standard.setValue(self.userData, forKey:"userData")
                 //after successful login taking to dashboard
-                self.performSegue(withIdentifier:"dashSegue", sender:nil)
+                
             }
+                self.performSegue(withIdentifier:"dashSegue", sender:nil)
             }
             else
             {

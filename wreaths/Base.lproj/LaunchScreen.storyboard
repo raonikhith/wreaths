@@ -18,14 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wreath" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kk2-eh-XVH">
-                                <rect key="frame" x="20" y="382" width="374" height="142"/>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="42"/>
-                                <color key="textColor" red="0.97647058823529409" green="0.48627450980392156" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wreaths 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kk2-eh-XVH">
+                                <rect key="frame" x="20" y="428.5" width="374" height="49.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="44"/>
+                                <color key="textColor" red="0.76994523143521243" green="0.12300888284034529" blue="0.16590589231699432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.042540657883204207" green="0.52226360103626945" blue="0.032996751399661871" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Kk2-eh-XVH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="f1M-uy-NLW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kk2-eh-XVH" secondAttribute="trailing" constant="20" id="lGX-nn-Aol"/>

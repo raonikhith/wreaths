@@ -53,5 +53,8 @@ class DashBoardViewController: BaseViewController {
         
     }
     
-
+    //method to generate the reports
+    @IBAction func logout(_ sender: Any) {
+        
+    }
 }

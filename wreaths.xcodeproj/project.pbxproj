@@ -29,6 +29,10 @@
 		A5FDE5CD233B9BDF0030D90D /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDE5CC233B9BDF0030D90D /* EdgeInsetLabel.swift */; };
 		A5FDE5CF233B9D740030D90D /* CreateOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDE5CE233B9D740030D90D /* CreateOrderViewController.swift */; };
 		A5FDE5D2233B9F0C0030D90D /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDE5D1233B9F0C0030D90D /* ProductTableViewCell.swift */; };
+		DF33C4F9234FAE3E001FAF3E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF33C4F8234FAE3E001FAF3E /* Media.xcassets */; };
+		DF33C4FD234FAE66001FAF3E /* TableTopLivingTree.png in Resources */ = {isa = PBXBuildFile; fileRef = DF33C4FA234FAE65001FAF3E /* TableTopLivingTree.png */; };
+		DF33C4FE234FAE66001FAF3E /* classic-wreath.png in Resources */ = {isa = PBXBuildFile; fileRef = DF33C4FB234FAE66001FAF3E /* classic-wreath.png */; };
+		DF33C4FF234FAE66001FAF3E /* GarlandWM.png in Resources */ = {isa = PBXBuildFile; fileRef = DF33C4FC234FAE66001FAF3E /* GarlandWM.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,10 @@
 		B1E3388A4D34574478442721 /* Pods-wreaths.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wreaths.debug.xcconfig"; path = "Target Support Files/Pods-wreaths/Pods-wreaths.debug.xcconfig"; sourceTree = "<group>"; };
 		B85C78BCCF695DB8B9A153D4 /* Pods-wreathsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wreathsUITests.debug.xcconfig"; path = "Target Support Files/Pods-wreathsUITests/Pods-wreathsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0CB560C1C96A3E7B1289308 /* Pods-wreathsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wreathsUITests.release.xcconfig"; path = "Target Support Files/Pods-wreathsUITests/Pods-wreathsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DF33C4F8234FAE3E001FAF3E /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		DF33C4FA234FAE65001FAF3E /* TableTopLivingTree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableTopLivingTree.png; sourceTree = "<group>"; };
+		DF33C4FB234FAE66001FAF3E /* classic-wreath.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "classic-wreath.png"; sourceTree = "<group>"; };
+		DF33C4FC234FAE66001FAF3E /* GarlandWM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GarlandWM.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +124,8 @@
 		A5A5A17823366A9D0060FD01 = {
 			isa = PBXGroup;
 			children = (
-				A5BEB604233FB4CE003C454E /* Assests */,
+				DF33C4F8234FAE3E001FAF3E /* Media.xcassets */,
+				A5BEB604233FB4CE003C454E /* Assets */,
 				A5FDE5D0233B9EEC0030D90D /* CustomCells */,
 				A5A5A1B3233671BF0060FD01 /* CustomClass */,
 				A5A5A1B223366AC30060FD01 /* ViewControllers */,
@@ -193,12 +202,15 @@
 			path = CustomClass;
 			sourceTree = "<group>";
 		};
-		A5BEB604233FB4CE003C454E /* Assests */ = {
+		A5BEB604233FB4CE003C454E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				DF33C4FB234FAE66001FAF3E /* classic-wreath.png */,
+				DF33C4FC234FAE66001FAF3E /* GarlandWM.png */,
+				DF33C4FA234FAE65001FAF3E /* TableTopLivingTree.png */,
 				A5BEB605233FB4DC003C454E /* arrow.png */,
 			);
-			path = Assests;
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		A5FDE5D0233B9EEC0030D90D /* CustomCells */ = {
@@ -343,9 +355,13 @@
 			files = (
 				A5A5A18F23366A9E0060FD01 /* LaunchScreen.storyboard in Resources */,
 				A56EEFC52338ACDE00E5848A /* GoogleService-Info.plist in Resources */,
+				DF33C4FF234FAE66001FAF3E /* GarlandWM.png in Resources */,
 				A5A5A18C23366A9E0060FD01 /* Assets.xcassets in Resources */,
 				A5BEB606233FB4DC003C454E /* arrow.png in Resources */,
+				DF33C4F9234FAE3E001FAF3E /* Media.xcassets in Resources */,
+				DF33C4FD234FAE66001FAF3E /* TableTopLivingTree.png in Resources */,
 				A5A5A18A23366A9D0060FD01 /* Main.storyboard in Resources */,
+				DF33C4FE234FAE66001FAF3E /* classic-wreath.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,12 +660,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3KJ8X7N93A;
 				INFOPLIST_FILE = wreaths/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.wreaths;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.wreaths.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -662,12 +679,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3KJ8X7N93A;
 				INFOPLIST_FILE = wreaths/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.wreaths;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.wreaths.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
