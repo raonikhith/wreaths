@@ -207,12 +207,17 @@
                                     <action selector="loginAction:" destination="zx6-D8-p1y" eventType="touchUpInside" id="007-5a-tXM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wreaths 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LB8-db-pfc">
-                                <rect key="frame" x="20" y="242.5" width="374" height="100"/>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="classic-wreath" translatesAutoresizingMaskIntoConstraints="NO" id="L8I-S9-GDp">
+                                <rect key="frame" x="20" y="88" width="364" height="230"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Wreaths 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LB8-db-pfc" userLabel="Wreaths 2019" customClass="EdgeInsetLabel" customModule="wreaths" customModuleProvider="target">
+                                <rect key="frame" x="20" y="238" width="268" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Lf1-XN-wjx"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="40"/>
                                 <color key="textColor" red="0.76994523140000004" green="0.1230088828" blue="0.1659058923" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -380,37 +385,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khK-eY-yN7" customClass="ShadowButton" customModule="wreaths" customModuleProvider="target">
-                                <rect key="frame" x="20" y="328" width="374" height="45"/>
-                                <color key="backgroundColor" red="0.76994523140000004" green="0.1230088828" blue="0.1659058923" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="ujt-Ak-lmh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Create New Order">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="2" height="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="createOrder:" destination="NlQ-bZ-5oB" eventType="touchUpInside" id="iXg-Pw-wvX"/>
-                                    <segue destination="72H-dD-Cre" kind="show" id="X2R-X6-fmT"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptp-xz-ALu" customClass="EdgeInsetLabel" customModule="wreaths" customModuleProvider="target">
-                                <rect key="frame" x="20" y="108" width="374" height="200"/>
+                                <rect key="frame" x="22" y="118" width="370" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="oth-Pa-KmQ"/>
@@ -433,13 +409,86 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nju-e9-s1b" customClass="ShadowButton" customModule="wreaths" customModuleProvider="target">
-                                <rect key="frame" x="20" y="398" width="374" height="45"/>
-                                <color key="backgroundColor" red="0.034126670040000001" green="0.27025987689999997" blue="0.03998993495" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="9S6-Bu-Xyr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uC0-oG-D7V">
+                                <rect key="frame" x="22" y="277" width="372" height="122"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.075148358921944908" green="0.27752220812182737" blue="0.052210456421832495" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.034126670040000001" green="0.27025987689999997" blue="0.03998993495" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TableTopLivingTree" translatesAutoresizingMaskIntoConstraints="NO" id="46b-Y9-V1w">
+                                <rect key="frame" x="28" y="281" width="109" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Total Sales Amount" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tzI-jp-66S">
+                                <rect key="frame" x="155" y="284" width="227" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.081437346110000003" green="0.31957883879999999" blue="0.062540595589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$ `${var}`" borderStyle="roundedRect" minimumFontSize="17" background="TableTopLivingTree" translatesAutoresizingMaskIntoConstraints="NO" id="XuR-WZ-y6r">
+                                <rect key="frame" x="225" y="351" width="153" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97643849365126911" green="0.95174010263530717" blue="0.28945718592414221" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="29"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4h4-mo-6zd">
+                                <rect key="frame" x="22" y="425" width="372" height="122"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.081437346109392628" green="0.31957883883248728" blue="0.062540595592422435" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.034126670040000001" green="0.27025987689999997" blue="0.03998993495" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$ `${var}`" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" background="TableTopLivingTree" translatesAutoresizingMaskIntoConstraints="NO" id="KMX-yn-lQV">
+                                <rect key="frame" x="225" y="503" width="153" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97643849370000002" green="0.95174010259999997" blue="0.28945718590000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="classic-wreath.png" translatesAutoresizingMaskIntoConstraints="NO" id="d4T-55-hUL">
+                                <rect key="frame" x="28" y="426" width="109" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khK-eY-yN7" customClass="ShadowButton" customModule="wreaths" customModuleProvider="target">
+                                <rect key="frame" x="20" y="572" width="374" height="45"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <color key="backgroundColor" red="0.76994523140000004" green="0.1230088828" blue="0.1659058923" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                                <state key="normal" title="Create New Order">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createOrder:" destination="NlQ-bZ-5oB" eventType="touchUpInside" id="iXg-Pw-wvX"/>
+                                    <segue destination="72H-dD-Cre" kind="show" id="X2R-X6-fmT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nju-e9-s1b" customClass="ShadowButton" customModule="wreaths" customModuleProvider="target">
+                                <rect key="frame" x="20" y="645" width="374" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.035743494377074553" green="0.27025987689999997" blue="0.043849947420796898" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
                                 <state key="normal" title="Generate Report">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -461,13 +510,11 @@
                                     <action selector="generateReport:" destination="NlQ-bZ-5oB" eventType="touchUpInside" id="yHI-lR-r9c"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Cm-vI-Imz" customClass="ShadowButton" customModule="wreaths" customModuleProvider="target">
-                                <rect key="frame" x="20" y="463" width="374" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Cm-vI-Imz" customClass="ShadowButton" customModule="wreaths" customModuleProvider="target">
+                                <rect key="frame" x="18" y="719" width="374" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.034126670040000001" green="0.27025987689999997" blue="0.03998993495" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="RQe-vT-LKu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -489,21 +536,20 @@
                                     <action selector="generateReport:" destination="NlQ-bZ-5oB" eventType="touchUpInside" id="lhx-eS-Oaq"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Total Comission Amount" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1hS-dH-Uj9">
+                                <rect key="frame" x="156" y="431" width="230" height="39"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <color key="backgroundColor" red="0.081437346110000003" green="0.31957883879999999" blue="0.062540595589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="nju-e9-s1b" firstAttribute="leading" secondItem="4Mf-hX-8uD" secondAttribute="leading" constant="20" id="4up-o0-suQ"/>
-                            <constraint firstItem="1Cm-vI-Imz" firstAttribute="leading" secondItem="4Mf-hX-8uD" secondAttribute="leading" constant="20" id="5s9-ut-Oad"/>
-                            <constraint firstItem="nju-e9-s1b" firstAttribute="top" secondItem="khK-eY-yN7" secondAttribute="bottom" constant="25" id="DHY-1E-UFN"/>
-                            <constraint firstItem="4Mf-hX-8uD" firstAttribute="trailing" secondItem="1Cm-vI-Imz" secondAttribute="trailing" constant="20" id="DIh-u2-G8h"/>
-                            <constraint firstItem="Ptp-xz-ALu" firstAttribute="top" secondItem="4Mf-hX-8uD" secondAttribute="top" constant="20" id="ECs-Lx-4QH"/>
-                            <constraint firstItem="4Mf-hX-8uD" firstAttribute="trailing" secondItem="khK-eY-yN7" secondAttribute="trailing" constant="20" id="KIP-LD-w4l"/>
-                            <constraint firstItem="khK-eY-yN7" firstAttribute="leading" secondItem="4Mf-hX-8uD" secondAttribute="leading" constant="20" id="NVj-Hg-5Sj"/>
-                            <constraint firstItem="4Mf-hX-8uD" firstAttribute="trailing" secondItem="Ptp-xz-ALu" secondAttribute="trailing" constant="20" id="gNj-z3-IhJ"/>
-                            <constraint firstItem="Ptp-xz-ALu" firstAttribute="leading" secondItem="4Mf-hX-8uD" secondAttribute="leading" constant="20" id="j3m-n2-Anh"/>
-                            <constraint firstItem="khK-eY-yN7" firstAttribute="top" secondItem="Ptp-xz-ALu" secondAttribute="bottom" constant="20" id="l9n-L1-gCK"/>
-                            <constraint firstItem="4Mf-hX-8uD" firstAttribute="trailing" secondItem="nju-e9-s1b" secondAttribute="trailing" constant="20" id="quG-R0-EM4"/>
-                            <constraint firstItem="1Cm-vI-Imz" firstAttribute="top" secondItem="nju-e9-s1b" secondAttribute="bottom" constant="20" id="tK6-RD-0Qi"/>
+                            <constraint firstItem="Ptp-xz-ALu" firstAttribute="leading" secondItem="4Mf-hX-8uD" secondAttribute="leading" constant="22" id="1XG-VR-fYO"/>
+                            <constraint firstItem="Ptp-xz-ALu" firstAttribute="top" secondItem="4Mf-hX-8uD" secondAttribute="top" constant="30" id="npC-pY-rhf"/>
+                            <constraint firstItem="4Mf-hX-8uD" firstAttribute="trailing" secondItem="Ptp-xz-ALu" secondAttribute="trailing" constant="22" id="qqA-mZ-ThH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Mf-hX-8uD"/>
                     </view>
@@ -540,7 +586,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="y9c-L2-djW"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -549,7 +595,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="xoZ-kU-gqX"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -657,7 +703,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="LU9-p4-kdc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
                                 <state key="normal" title="Check Out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -681,7 +727,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="ZPK-B5-Ivr"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -690,7 +736,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="DFg-Au-KEB"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -699,7 +745,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="8Hp-sk-VMi"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -822,7 +868,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="zvH-Nu-COE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -889,9 +935,12 @@
     </scenes>
     <resources>
         <image name="GarlandWM.png" width="383" height="348"/>
+        <image name="TableTopLivingTree" width="186" height="300"/>
         <image name="arrow.png" width="30" height="30"/>
+        <image name="classic-wreath" width="600" height="600"/>
+        <image name="classic-wreath.png" width="600" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GUU-TH-C7U"/>
+        <segue reference="SMh-WC-3LI"/>
     </inferredMetricsTieBreakers>
 </document>

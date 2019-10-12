@@ -39,6 +39,7 @@ class DashBoardViewController: BaseViewController {
             Total Amount of sales
             Total Amount of commission
             """#
+        
     }
     
     
