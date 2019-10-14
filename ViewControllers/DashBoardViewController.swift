@@ -14,6 +14,7 @@ class DashBoardViewController: BaseViewController {
     @IBOutlet weak var welcomeLbl: UILabel!
     
     
+    @IBOutlet weak var firstImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +24,9 @@ class DashBoardViewController: BaseViewController {
         
         //configurations
         configure_dash()
-
+        
+        
     }
-
-    
     
     func configure_dash()
     {
@@ -39,7 +39,16 @@ class DashBoardViewController: BaseViewController {
             Total Amount of sales
             Total Amount of commission
             """#
-        
+        let flash = CABasicAnimation(keyPath: "opacity")
+        flash.duration = 0.5
+        flash.fromValue = 1
+        flash.toValue = 0.1
+        flash.timingFunction = CAMediaTimingFunction(name:
+            CAMediaTimingFunctionName.easeInEaseOut)
+        flash.autoreverses = true
+        flash.repeatCount = 3
+        self.firstImage.fadeTransition(0.4)
+       // self.firstImage.text = "text"
     }
     
     
@@ -57,5 +66,15 @@ class DashBoardViewController: BaseViewController {
     //method to generate the reports
     @IBAction func logout(_ sender: Any) {
         
+    }
+}
+extension UIView{
+    func fadeTransition(_ duration:CFTimeInterval){
+        let animation = CATransition()
+        animation.timingFunction = CAMediaTimingFunction(name:
+            CAMediaTimingFunctionName.easeInEaseOut)
+        animation.type = CATransitionType.fade
+        animation.duration = duration
+        layer.add(animation, forKey: CATransitionType.fade.rawValue)
     }
 }
