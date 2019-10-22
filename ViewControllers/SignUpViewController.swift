@@ -86,6 +86,10 @@ class SignUpViewController: BaseViewController {
                                             print("Error adding document: \(err)")
                                         } else {
                                             print("Document added with ID: \(self.ref!.documentID)")
+                                            self.userData = self.registrationData
+                                                                    self.userData["dID"] = self.ref!.documentID
+                                                                           UserDefaults.standard.setValue(self.userData, forKey:"userData")
+                                             self.performSegue(withIdentifier:"dashSegue", sender:nil)
                                         }
                                     }
                                     

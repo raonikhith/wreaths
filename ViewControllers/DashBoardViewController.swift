@@ -13,6 +13,9 @@ class DashBoardViewController: BaseViewController {
 
     //IBOutlet's
     @IBOutlet weak var welcomeLbl: UILabel!
+    
+    @IBOutlet weak var totalSalesAmount: UILabel!
+    @IBOutlet weak var commission: UILabel!
     //variable declaration's
     var orders = [JSON]()
     var orderDetails:JSON = JSON.null
@@ -25,8 +28,9 @@ class DashBoardViewController: BaseViewController {
         
         //configurations
         configure_dash()
-
         
+        labelAnnimation(_label: self.commission, _labelColor: UIColor.red)
+        labelAnnimation(_label: self.totalSalesAmount, _labelColor: UIColor.green)
         
     }
 
@@ -41,7 +45,22 @@ class DashBoardViewController: BaseViewController {
      
     }
     
-    
+    func labelAnnimation(_label:UILabel, _labelColor:UIColor){
+        let labelCopy = _label.copyLabel()
+        labelCopy.font = _label.font.withSize(20)
+        var boundsSales = labelCopy.bounds
+        boundsSales.size = labelCopy.intrinsicContentSize
+        let scaleX1 = boundsSales.size.width / _label.frame.size.width
+        let scaleY1 = boundsSales.size.height / _label.frame.size.height
+        UIView.animate(withDuration: 2.0, animations: {
+            self.totalSalesAmount.transform = CGAffineTransform(scaleX: scaleX1, y: scaleY1)
+        }, completion: { done in
+            _label.font = labelCopy.font
+            _label.transform = .identity
+            _label.bounds = boundsSales
+            _label.textColor = _labelColor
+        })
+    }
     func getUserOrders()
     {
         _ = db.collection("Orders").document(self.userData["FirstName"] as! String).collection("uOrders").getDocuments(){(querySnapshot, err) in
@@ -63,11 +82,25 @@ class DashBoardViewController: BaseViewController {
                            }
                            
                            print(price)
-                           self.welcomeLbl.text = #"""
-                                    Hello Mr \#(self.userData["FirstName"] as! String)
-                                    Total Amount of sales $ \#(price)
-                                    Total Amount of commission $ \#((price*40)/100)
-                                    """#
+                    
+                    if (price > 0 ){
+                        self.welcomeLbl.text = #"""
+                        Hello Mr \#(self.userData["FirstName"] as! String)
+                        Total Amount of sales $ \#(price)
+                        Total Amount of commission $ \#((price*40)/100)
+                        """#
+                        self.totalSalesAmount.text = "$\(price)"
+                        self.commission.text = "$\((price*40)/100)"
+                    }
+                    else{
+                        self.welcomeLbl.text = #"""
+                        Hello Mr \#(self.userData["FirstName"] as! String)
+                        Total Amount of sales $ \#(price)
+                        Total Amount of commission $ \#(price)
+                        """#
+                        self.totalSalesAmount.text = "$\(price)"
+                        self.commission.text = "$\(price)"
+                    }
                 }
 
                 else
@@ -115,4 +148,13 @@ class DashBoardViewController: BaseViewController {
         
     }
     
+}
+extension UILabel {
+    func copyLabel() -> UILabel {
+        let label = UILabel()
+        label.font = self.font
+        label.frame = self.frame
+        label.text = self.text
+        return label
+    }
 }

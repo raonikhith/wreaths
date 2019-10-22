@@ -373,8 +373,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptp-xz-ALu" customClass="EdgeInsetLabel" customModule="wreaths" customModuleProvider="target">
-                                <rect key="frame" x="20" y="108" width="374" height="200"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptp-xz-ALu" customClass="EdgeInsetLabel" customModule="wreaths" customModuleProvider="target">
+                                <rect key="frame" x="20" y="108" width="374" height="103"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="oth-Pa-KmQ"/>
@@ -398,10 +398,22 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" misplaced="YES" image="TableTopLivingTree" translatesAutoresizingMaskIntoConstraints="NO" id="dkK-fR-Tk3">
-                                <rect key="frame" x="20" y="299" width="224" height="289"/>
+                                <rect key="frame" x="20" y="275" width="224" height="289"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Total Commission:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPa-Oq-lib">
-                                <rect key="frame" x="254" y="517" width="140" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Sales:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8a-XK-hGb">
+                                <rect key="frame" x="254" y="358" width="88" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Commission:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPa-Oq-lib">
+                                <rect key="frame" x="254" y="449.5" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commission" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ic-mD-HuQ" userLabel="Commission">
+                                <rect key="frame" x="254" y="490.5" width="94" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -463,8 +475,8 @@
                                     <action selector="generateReport:" destination="NlQ-bZ-5oB" eventType="touchUpInside" id="yHI-lR-r9c"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Total Sales:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8a-XK-hGb">
-                                <rect key="frame" x="254" y="370" width="87.5" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWg-Yo-2tR">
+                                <rect key="frame" x="254" y="408.5" width="35" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -472,12 +484,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fPa-Oq-lib" firstAttribute="top" secondItem="v8a-XK-hGb" secondAttribute="bottom" constant="50" id="147-Xf-ByN"/>
                             <constraint firstItem="4Mf-hX-8uD" firstAttribute="trailing" secondItem="nju-e9-s1b" secondAttribute="trailing" constant="20" id="2QQ-cW-CP8"/>
+                            <constraint firstItem="fPa-Oq-lib" firstAttribute="top" secondItem="jWg-Yo-2tR" secondAttribute="bottom" constant="20" id="3Mq-yc-ras"/>
                             <constraint firstItem="dkK-fR-Tk3" firstAttribute="leading" secondItem="4Mf-hX-8uD" secondAttribute="leading" constant="20" id="41F-yr-Nn4"/>
                             <constraint firstItem="nju-e9-s1b" firstAttribute="leading" secondItem="4Mf-hX-8uD" secondAttribute="leading" constant="20" id="4up-o0-suQ"/>
                             <constraint firstItem="nju-e9-s1b" firstAttribute="top" secondItem="khK-eY-yN7" secondAttribute="bottom" constant="25" id="52Y-pv-oLC"/>
+                            <constraint firstItem="jWg-Yo-2tR" firstAttribute="top" secondItem="v8a-XK-hGb" secondAttribute="bottom" constant="30" id="5pw-5Q-cko"/>
                             <constraint firstItem="dkK-fR-Tk3" firstAttribute="top" secondItem="Ptp-xz-ALu" secondAttribute="bottom" constant="35" id="61s-Jc-Wol"/>
+                            <constraint firstItem="jWg-Yo-2tR" firstAttribute="leading" secondItem="dkK-fR-Tk3" secondAttribute="trailing" constant="10" id="6ay-4s-dOQ"/>
                             <constraint firstItem="nju-e9-s1b" firstAttribute="top" secondItem="khK-eY-yN7" secondAttribute="bottom" constant="25" id="DHY-1E-UFN"/>
                             <constraint firstItem="Ptp-xz-ALu" firstAttribute="top" secondItem="4Mf-hX-8uD" secondAttribute="top" constant="20" id="ECs-Lx-4QH"/>
                             <constraint firstItem="dkK-fR-Tk3" firstAttribute="top" secondItem="Ptp-xz-ALu" secondAttribute="bottom" constant="35" id="Fst-rU-19b"/>
@@ -485,10 +499,13 @@
                             <constraint firstItem="dkK-fR-Tk3" firstAttribute="leading" secondItem="4Mf-hX-8uD" secondAttribute="leading" constant="20" id="JXK-gY-5nt"/>
                             <constraint firstItem="4Mf-hX-8uD" firstAttribute="trailing" secondItem="khK-eY-yN7" secondAttribute="trailing" constant="20" id="KIP-LD-w4l"/>
                             <constraint firstItem="khK-eY-yN7" firstAttribute="leading" secondItem="4Mf-hX-8uD" secondAttribute="leading" constant="20" id="NVj-Hg-5Sj"/>
-                            <constraint firstItem="khK-eY-yN7" firstAttribute="top" secondItem="fPa-Oq-lib" secondAttribute="bottom" constant="100" id="QHw-ml-WWR"/>
+                            <constraint firstItem="6Ic-mD-HuQ" firstAttribute="leading" secondItem="dkK-fR-Tk3" secondAttribute="trailing" constant="10" id="SFU-r4-xfk"/>
                             <constraint firstItem="4Mf-hX-8uD" firstAttribute="trailing" secondItem="fPa-Oq-lib" secondAttribute="trailing" constant="20" id="SaJ-hT-h7f"/>
-                            <constraint firstItem="v8a-XK-hGb" firstAttribute="top" secondItem="Ptp-xz-ALu" secondAttribute="bottom" constant="100" id="YzZ-jX-KaT"/>
+                            <constraint firstItem="v8a-XK-hGb" firstAttribute="top" secondItem="Ptp-xz-ALu" secondAttribute="bottom" constant="50" id="cGa-gX-byg"/>
                             <constraint firstItem="4Mf-hX-8uD" firstAttribute="trailing" secondItem="Ptp-xz-ALu" secondAttribute="trailing" constant="20" id="gNj-z3-IhJ"/>
+                            <constraint firstItem="jWg-Yo-2tR" firstAttribute="top" secondItem="v8a-XK-hGb" secondAttribute="bottom" constant="20" id="hDG-SY-rOI"/>
+                            <constraint firstItem="6Ic-mD-HuQ" firstAttribute="top" secondItem="fPa-Oq-lib" secondAttribute="bottom" constant="20" id="i4q-4c-y5i"/>
+                            <constraint firstItem="fPa-Oq-lib" firstAttribute="top" secondItem="jWg-Yo-2tR" secondAttribute="bottom" constant="20" id="iFT-kJ-6Jd"/>
                             <constraint firstItem="Ptp-xz-ALu" firstAttribute="leading" secondItem="4Mf-hX-8uD" secondAttribute="leading" constant="20" id="j3m-n2-Anh"/>
                             <constraint firstItem="v8a-XK-hGb" firstAttribute="leading" secondItem="dkK-fR-Tk3" secondAttribute="trailing" constant="10" id="j6D-Pg-gUs"/>
                             <constraint firstItem="khK-eY-yN7" firstAttribute="top" secondItem="dkK-fR-Tk3" secondAttribute="bottom" constant="50" id="nof-3t-eJO"/>
@@ -506,6 +523,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="commission" destination="6Ic-mD-HuQ" id="AoA-SH-cnq"/>
+                        <outlet property="totalSalesAmount" destination="jWg-Yo-2tR" id="ZHO-Up-ghw"/>
                         <outlet property="welcomeLbl" destination="Ptp-xz-ALu" id="RWI-0M-LhN"/>
                         <segue destination="nMq-lu-g3S" kind="show" identifier="generateSegue" id="xRC-jd-Q4N"/>
                     </connections>
@@ -996,7 +1015,7 @@
             </objects>
             <point key="canvasLocation" x="3218.840579710145" y="30.803571428571427"/>
         </scene>
-        <!--Enter Address-->
+        <!--Enter Customer Address-->
         <scene sceneID="Ejc-z1-5Hc">
             <objects>
                 <viewController id="YD8-46-TwO" customClass="CheckOutViewController" customModule="wreaths" customModuleProvider="target" sceneMemberID="viewController">
@@ -1036,18 +1055,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orz-wA-SjH">
-                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
-                                <color key="backgroundColor" red="0.76862745099999996" green="0.1215686275" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mkz-Kl-j4a" customClass="PKButton" customModule="wreaths" customModuleProvider="target">
+                                <rect key="frame" x="20" y="393" width="374" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="zvH-Nu-COE"/>
+                                    <constraint firstAttribute="height" constant="45" id="V51-bE-Iws"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="26"/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="State">
+                                    <color key="titleColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="submitAction:" destination="YD8-46-TwO" eventType="touchUpInside" id="1Er-dO-kfP"/>
+                                    <action selector="stateDropDown:" destination="YD8-46-TwO" eventType="touchUpInside" id="J4C-ta-apY"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LAH-WZ-HbY">
@@ -1074,17 +1092,18 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TableTopLivingTree" translatesAutoresizingMaskIntoConstraints="NO" id="Vh7-Xe-62i">
                                 <rect key="frame" x="0.0" y="503" width="414" height="309"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mkz-Kl-j4a" customClass="PKButton" customModule="wreaths" customModuleProvider="target">
-                                <rect key="frame" x="20" y="393" width="374" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orz-wA-SjH">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <color key="backgroundColor" red="0.76862745099999996" green="0.1215686275" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="V51-bE-Iws"/>
+                                    <constraint firstAttribute="height" constant="50" id="zvH-Nu-COE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                <state key="normal" title="State">
-                                    <color key="titleColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="26"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="stateDropDown:" destination="YD8-46-TwO" eventType="touchUpInside" id="J4C-ta-apY"/>
+                                    <action selector="submitAction:" destination="YD8-46-TwO" eventType="touchUpInside" id="1Er-dO-kfP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1121,7 +1140,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NsJ-dx-Hd4"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Enter Address" id="pNE-P1-deK"/>
+                    <navigationItem key="navigationItem" title="Enter Customer Address" id="pNE-P1-deK"/>
                     <connections>
                         <outlet property="addressTF" destination="BXQ-De-8dF" id="8Gc-uP-vCl"/>
                         <outlet property="cityTF" destination="LAH-WZ-HbY" id="SQW-cJ-KSp"/>
