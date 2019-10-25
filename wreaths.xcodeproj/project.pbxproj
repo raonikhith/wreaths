@@ -660,7 +660,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T7R47A335Q;
+				DEVELOPMENT_TEAM = 3KJ8X7N93A;
 				INFOPLIST_FILE = wreaths/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -679,7 +679,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T7R47A335Q;
+				DEVELOPMENT_TEAM = 3KJ8X7N93A;
 				INFOPLIST_FILE = wreaths/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

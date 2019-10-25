@@ -59,9 +59,15 @@ extension OrdersViewController:UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let userDetails1 = orders[indexPath.row]["UserDetails"] as? [String:AnyObject]
+        var nameValue: String = ""
+        if let theTitle = userDetails1?["Name"] {
+            nameValue = theTitle as! String
+        }
+        print("Sudha Test", nameValue)
         
         let cell = tableView.dequeueReusableCell(withIdentifier:"oCell") as! OrdersTableViewCell
-        cell.textLabel?.text = "Order ID :- \(orders[indexPath.row]["dID"]!)"
+        cell.textLabel?.text = "Customer Name :- \(nameValue)"
         cell.selectionStyle = .none
         return cell
     }

@@ -11,11 +11,20 @@ import SwiftyJSON
 
 class DashBoardViewController: BaseViewController {
 
+    
+    var crossFading: Bool {
+        return crossFadeSwitch.isOn
+    }
+    let duration = 1.0
+    let fontSizeSmall: CGFloat = 20
+    let fontSizeBig: CGFloat = 100
+    var isSmall: Bool = true
     //IBOutlet's
+    @IBOutlet weak var crossFadeSwitch: UISwitch!
     @IBOutlet weak var welcomeLbl: UILabel!
     
-    @IBOutlet weak var totalSalesAmount: UILabel!
-    @IBOutlet weak var commission: UILabel!
+    @IBOutlet weak var totalSalesAmount:UILabel!
+    @IBOutlet weak var commission:UILabel!
     //variable declaration's
     var orders = [JSON]()
     var orderDetails:JSON = JSON.null
@@ -29,9 +38,9 @@ class DashBoardViewController: BaseViewController {
         //configurations
         configure_dash()
         
-        labelAnnimation(_label: self.commission, _labelColor: UIColor.red)
-        labelAnnimation(_label: self.totalSalesAmount, _labelColor: UIColor.green)
-        
+        labelAnnimation(_label: self.commission, _labelColor: UIColor.purple)
+        labelAnnimation(_label: self.totalSalesAmount, _labelColor: UIColor.purple)
+        //reset(self.commission)
     }
 
     
@@ -50,15 +59,16 @@ class DashBoardViewController: BaseViewController {
         labelCopy.font = _label.font.withSize(20)
         var boundsSales = labelCopy.bounds
         boundsSales.size = labelCopy.intrinsicContentSize
-        let scaleX1 = boundsSales.size.width / _label.frame.size.width
-        let scaleY1 = boundsSales.size.height / _label.frame.size.height
-        UIView.animate(withDuration: 2.0, animations: {
+        let scaleX1 = boundsSales.size.width/_label.frame.size.width
+        let scaleY1 = boundsSales.size.height/_label.frame.size.height
+        UIView.animate(withDuration: 1.0, animations: {
             self.totalSalesAmount.transform = CGAffineTransform(scaleX: scaleX1, y: scaleY1)
         }, completion: { done in
-            _label.font = labelCopy.font
-            _label.transform = .identity
-            _label.bounds = boundsSales
-            _label.textColor = _labelColor
+           _label.font = labelCopy.font
+           _label.transform = .identity
+           _label.bounds = boundsSales
+           _label.textColor = _labelColor
+           _label.isHighlighted = !_label.isHighlighted
         })
     }
     func getUserOrders()
@@ -148,6 +158,125 @@ class DashBoardViewController: BaseViewController {
         
     }
     
+
+
+@IBAction func reset(_ sender: Any) {
+    var bounds = self.commission.bounds
+    self.commission.font = self.commission.font.withSize(fontSizeSmall)
+    bounds.size = self.commission.intrinsicContentSize
+    self.commission.bounds = bounds
+    isSmall = true
+}
+
+@IBAction func animateFont(_ sender: Any) {
+    if isSmall {
+        if crossFading {
+            enlargeWithCrossFade()
+        } else {
+            enlarge()
+        }
+    } else {
+        if crossFading {
+            shrinkWithCrossFade()
+        } else {
+            shrink()
+        }
+    }
+    isSmall = !isSmall
+}
+
+func enlarge() {
+    var biggerBounds = commission.bounds
+    commission.font = commission.font.withSize(fontSizeBig)
+    biggerBounds.size = commission.intrinsicContentSize
+    
+    commission.transform = scaleTransform(from: biggerBounds.size, to: commission.bounds.size)
+    commission.bounds = biggerBounds
+    
+    UIView.animate(withDuration: duration) {
+        self.commission.transform = .identity
+    }
+}
+
+func enlargeWithCrossFade() {
+    let labelCopy = commission.copyLabel()
+    view.addSubview(labelCopy)
+    
+    var biggerBounds = commission.bounds
+    commission.font = commission.font.withSize(fontSizeBig)
+    biggerBounds.size = commission.intrinsicContentSize
+    
+    commission.transform = scaleTransform(from: biggerBounds.size, to: commission.bounds.size)
+    let enlargeTransform = scaleTransform(from: commission.bounds.size, to: biggerBounds.size)
+    commission.bounds = biggerBounds
+    commission.alpha = 0.0
+    
+    UIView.animate(withDuration: duration, animations: {
+        self.commission.transform = .identity
+        labelCopy.transform = enlargeTransform
+    }, completion: { done in
+        labelCopy.removeFromSuperview()
+    })
+    
+    UIView.animate(withDuration: duration / 2) {
+        self.commission.alpha = 1.0
+        labelCopy.alpha = 0.0
+    }
+}
+
+func shrink() {
+    let labelCopy = commission.copyLabel()
+    var smallerBounds = labelCopy.bounds
+    labelCopy.font = commission.font.withSize(fontSizeSmall)
+    smallerBounds.size = labelCopy.intrinsicContentSize
+    
+    let shrinkTransform = scaleTransform(from: commission.bounds.size, to: smallerBounds.size)
+    
+    UIView.animate(withDuration: duration, animations: {
+        self.commission.transform = shrinkTransform
+    }, completion: { done in
+        self.commission.font = labelCopy.font
+        self.commission.transform = .identity
+        self.commission.bounds = smallerBounds
+    })
+}
+
+func shrinkWithCrossFade() {
+    let labelCopy = commission.copyLabel()
+    view.addSubview(labelCopy)
+    
+    var smallerBounds = commission.bounds
+    commission.font = commission.font.withSize(fontSizeSmall)
+    smallerBounds.size = commission.intrinsicContentSize
+    
+    commission.transform = scaleTransform(from: smallerBounds.size, to: commission.bounds.size)
+    commission.alpha = 0.0
+    
+    let shrinkTransform = scaleTransform(from: commission.bounds.size, to: smallerBounds.size)
+    
+    UIView.animate(withDuration: duration, animations: {
+        labelCopy.transform = shrinkTransform
+        self.commission.transform = .identity
+    }, completion: { done in
+        self.commission.transform = .identity
+        self.commission.bounds = smallerBounds
+    })
+    
+    let percUntilFade = 0.8
+    UIView.animate(withDuration: duration - (duration * percUntilFade), delay: duration * percUntilFade, options: .curveLinear, animations: {
+        labelCopy.alpha = 0
+        self.commission.alpha = 1
+    }, completion: { done in
+        labelCopy.removeFromSuperview()
+    })
+}
+
+private func scaleTransform(from: CGSize, to: CGSize) -> CGAffineTransform {
+    let scaleX = to.width / from.width
+    let scaleY = to.height / from.height
+    
+    return CGAffineTransform(scaleX: scaleX, y: scaleY)
+}
 }
 extension UILabel {
     func copyLabel() -> UILabel {

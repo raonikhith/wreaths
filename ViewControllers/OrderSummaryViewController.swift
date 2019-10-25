@@ -27,6 +27,7 @@ class OrderSummaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Do any additional setup after loading the view.
         
         let userD = orderDetails["UserDetails"] as! [String:Any]
@@ -37,9 +38,9 @@ class OrderSummaryViewController: UIViewController {
         nameLbl.text = "Name :- \(userD["Name"] ?? "")"
         mobileLbl.text = "Mobile :- \(userD["Mobile"] ?? "")"
         emailLbl.text = "Email :- \(userD["Email"] ?? "")"
-        oId.text = "Order ID :- \(orderDetails["dID"] ?? "")"
         
         oderArrayItems = JSON(orderDetails["OrderDetails"]!)
+        print("###################", orderDetails)
         
         var price = Int()
         for i in 0..<self.oderArrayItems.count
@@ -48,8 +49,6 @@ class OrderSummaryViewController: UIViewController {
         }
         
         self.totalLbl.text = #"""
-            Credit
-            Cash
             Total
             """#
         
