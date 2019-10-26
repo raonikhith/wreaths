@@ -68,6 +68,7 @@ extension OrdersViewController:UITableViewDelegate,UITableViewDataSource
         
         let cell = tableView.dequeueReusableCell(withIdentifier:"oCell") as! OrdersTableViewCell
         cell.textLabel?.text = "Customer Name :- \(nameValue)"
+        cell.detailTextLabel?.text = " OrderID :- \(orders[indexPath.row]["dID"]!)"
         cell.selectionStyle = .none
         return cell
     }

@@ -36,13 +36,18 @@ class DashBoardViewController: BaseViewController {
         self.title = "Wreath"
         
         //configurations
-        configure_dash()
+      
         
         labelAnnimation(_label: self.commission, _labelColor: UIColor.purple)
         labelAnnimation(_label: self.totalSalesAmount, _labelColor: UIColor.purple)
         //reset(self.commission)
     }
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+          configure_dash()
+    }
     
     
     func configure_dash()

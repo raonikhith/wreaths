@@ -87,17 +87,25 @@ class CheckOutViewController: BaseViewController
                     let userDetails = ["Name":nameTF.text!,"Mobile":mobileTF.text!,"Email":emailTF.text!,"Address":addressTF.text!,"City":cityTF.text!,"State":state,"ZipCode":zipCodeTF.text!,"Price":totalPrice] as [String : Any]
                     cart = ["UserDetails":userDetails,
                             "OrderDetails":carts]
-                    
-                    db.collection("Orders").document(self.userData["FirstName"] as! String).setData(userData)
-                    db.collection("Orders").document(self.userData["FirstName"] as! String).collection("uOrders").document().setData(cart)
-                    
-                    let alertView = UIAlertController(title: "", message: "Order Created Successfully", preferredStyle: .alert)
-                    let action = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
-                        self.navigationController?.popToViewController(ofClass: DashBoardViewController.self)
-                        
-                    })
-                    alertView.addAction(action)
-                    self.present(alertView, animated: true, completion: nil)
+                    _ = db.collection("Orders").document(self.userData["FirstName"] as! String).collection("uOrders").getDocuments(){(querySnapshot, err) in
+                               if let err = err {
+                                   print("Error getting documents: \(err)")
+                               } else {
+                                self.db.collection("Orders").document(self.userData["FirstName"] as! String).setData(self.userData)
+                                self.db.collection("Orders").document(self.userData["FirstName"] as! String).collection("uOrders").document("\((querySnapshot?.documents.count)!+1)").setData(self.cart)
+                                                      
+                                                      let alertView = UIAlertController(title: "", message: "Order Created Successfully", preferredStyle: .alert)
+                                                      let action = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                                                          self.navigationController?.popToViewController(ofClass: DashBoardViewController.self)
+                                                          
+                                                      })
+                                                      alertView.addAction(action)
+                                                      self.present(alertView, animated: true, completion: nil)
+                                   
+                               }
+
+                           }
+                   
                 }
                 else
                 {

@@ -58,9 +58,9 @@ class CartViewController: BaseViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! CheckOutViewController
         vc.cartObjects = self.cartObjects
-     //   vc.totalPrice = price
-       // vc.cash = cashTF.text!
-        //vc.credit = creditTf.text!
+        vc.totalPrice = price
+//        vc.cash = cashTF.text!
+//        vc.credit = creditTf.text!
     }
 
 }
