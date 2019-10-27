@@ -119,6 +119,7 @@ PODS:
   - nanopb/encode (0.3.901)
   - Protobuf (3.9.0)
   - SwiftyJSON (4.3.0)
+  - UICircularProgressRing (6.3.0)
   - ValueStepper (1.6)
 
 DEPENDENCIES:
@@ -128,6 +129,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - IQKeyboardManagerSwift
   - SwiftyJSON (~> 4.0)
+  - UICircularProgressRing
   - ValueStepper
 
 SPEC REPOS:
@@ -157,6 +159,7 @@ SPEC REPOS:
     - ValueStepper
   trunk:
     - DropDown
+    - UICircularProgressRing
 
 SPEC CHECKSUMS:
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
@@ -182,8 +185,9 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  UICircularProgressRing: e700fb0505328e88ee53c4ed92bee6d1a5b8bbe3
   ValueStepper: 8b120c72c8d1391cd874a427485e2e57fda1a0b9
 
-PODFILE CHECKSUM: b3ec983d952c48cae1702d4bbfd70c842a33392b
+PODFILE CHECKSUM: 911ea6257fd326d5d90760252795964ac51b4f36
 
 COCOAPODS: 1.8.3

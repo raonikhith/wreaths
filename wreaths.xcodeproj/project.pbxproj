@@ -33,6 +33,8 @@
 		A5FDE5CD233B9BDF0030D90D /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDE5CC233B9BDF0030D90D /* EdgeInsetLabel.swift */; };
 		A5FDE5CF233B9D740030D90D /* CreateOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDE5CE233B9D740030D90D /* CreateOrderViewController.swift */; };
 		A5FDE5D2233B9F0C0030D90D /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDE5D1233B9F0C0030D90D /* ProductTableViewCell.swift */; };
+		DF7046962366254E005433D0 /* logoFund4Scouts.png in Resources */ = {isa = PBXBuildFile; fileRef = DF7046952366254E005433D0 /* logoFund4Scouts.png */; };
+		DF7046A023663D92005433D0 /* IconLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DF70469F23663D92005433D0 /* IconLogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		B1E3388A4D34574478442721 /* Pods-wreaths.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wreaths.debug.xcconfig"; path = "Target Support Files/Pods-wreaths/Pods-wreaths.debug.xcconfig"; sourceTree = "<group>"; };
 		B85C78BCCF695DB8B9A153D4 /* Pods-wreathsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wreathsUITests.debug.xcconfig"; path = "Target Support Files/Pods-wreathsUITests/Pods-wreathsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0CB560C1C96A3E7B1289308 /* Pods-wreathsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wreathsUITests.release.xcconfig"; path = "Target Support Files/Pods-wreathsUITests/Pods-wreathsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DF7046952366254E005433D0 /* logoFund4Scouts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoFund4Scouts.png; sourceTree = "<group>"; };
+		DF70469F23663D92005433D0 /* IconLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +211,8 @@
 		A5C25CBB235CE0E6005A6905 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DF70469F23663D92005433D0 /* IconLogo.png */,
+				DF7046952366254E005433D0 /* logoFund4Scouts.png */,
 				A5C25CBF235CE10D005A6905 /* arrow.png */,
 			);
 			path = Images;
@@ -313,7 +319,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1030;
-				ORGANIZATIONNAME = NFCIndia;
+				ORGANIZATIONNAME = TechnisarInc;
 				TargetAttributes = {
 					A5A5A18023366A9D0060FD01 = {
 						CreatedOnToolsVersion = 10.3;
@@ -356,8 +362,10 @@
 				A5A5A18F23366A9E0060FD01 /* LaunchScreen.storyboard in Resources */,
 				A56EEFC52338ACDE00E5848A /* GoogleService-Info.plist in Resources */,
 				A5A5A18C23366A9E0060FD01 /* Assets.xcassets in Resources */,
+				DF7046A023663D92005433D0 /* IconLogo.png in Resources */,
 				A5A5A18A23366A9D0060FD01 /* Main.storyboard in Resources */,
 				A5C25CC3235CE10D005A6905 /* arrow.png in Resources */,
+				DF7046962366254E005433D0 /* logoFund4Scouts.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,6 +667,7 @@
 			baseConfigurationReference = B1E3388A4D34574478442721 /* Pods-wreaths.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3KJ8X7N93A;
 				INFOPLIST_FILE = wreaths/Info.plist;
@@ -666,8 +675,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.wreaths;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.funds4scouts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -678,6 +688,7 @@
 			baseConfigurationReference = 4322768385BBD7F02BBC804E /* Pods-wreaths.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3KJ8X7N93A;
 				INFOPLIST_FILE = wreaths/Info.plist;
@@ -685,8 +696,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.wreaths;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.funds4scouts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

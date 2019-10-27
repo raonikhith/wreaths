@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import UICircularProgressRing
 
 class DashBoardViewController: BaseViewController {
 
@@ -25,15 +26,22 @@ class DashBoardViewController: BaseViewController {
     
     @IBOutlet weak var totalSalesAmount:UILabel!
     @IBOutlet weak var commission:UILabel!
+    
+    @IBOutlet weak var totalSum: UICircularProgressRing!
+    
+    @IBOutlet weak var commissionView: UICircularProgressRing!
+    
+    
     //variable declaration's
     var orders = [JSON]()
     var orderDetails:JSON = JSON.null
+    var price = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-        self.title = "Wreath"
+        self.title = "Home"
         
         //configurations
       
@@ -46,6 +54,8 @@ class DashBoardViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+            price = 0
           configure_dash()
     }
     
@@ -78,11 +88,14 @@ class DashBoardViewController: BaseViewController {
     }
     func getUserOrders()
     {
+        
+        self.orders.removeAll()
+        var fortyVal = 0
         _ = db.collection("Orders").document(self.userData["FirstName"] as! String).collection("uOrders").getDocuments(){(querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                if querySnapshot!.documents.count>0
+                if querySnapshot!.documents.count>=0
                 {
                 for document in querySnapshot!.documents {
                     print("\(document.documentID) => \(document.data())")
@@ -106,6 +119,8 @@ class DashBoardViewController: BaseViewController {
                         """#
                         self.totalSalesAmount.text = "$\(price)"
                         self.commission.text = "$\((price*40)/100)"
+                        fortyVal = ((price*40)/100)
+                        
                     }
                     else{
                         self.welcomeLbl.text = #"""
@@ -116,6 +131,14 @@ class DashBoardViewController: BaseViewController {
                         self.totalSalesAmount.text = "$\(price)"
                         self.commission.text = "$\(price)"
                     }
+                    
+                    let percent = (100*price)/3000
+                    self.totalSum.value = CGFloat(percent)
+                    
+                    print(fortyVal)
+//                    let fotyValue = (100*fortyVal)/3000
+//                    self.commissionView.value = CGFloat(fotyValue)
+                    
                 }
 
                 else
@@ -139,8 +162,12 @@ class DashBoardViewController: BaseViewController {
     
     //method to generate the reports
     @IBAction func generateReport(_ sender: Any) {
-        
+        if(Float(self.totalSum.value) > 0.0 ){
         self.performSegue(withIdentifier:"generateSegue", sender:nil)
+        }
+        else{
+            alert_popup(title: "No Sales", message: "Currently there are no orders available")
+        }
     }
     
     
