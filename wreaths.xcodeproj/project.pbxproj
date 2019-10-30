@@ -35,6 +35,8 @@
 		A5FDE5D2233B9F0C0030D90D /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDE5D1233B9F0C0030D90D /* ProductTableViewCell.swift */; };
 		DF7046962366254E005433D0 /* logoFund4Scouts.png in Resources */ = {isa = PBXBuildFile; fileRef = DF7046952366254E005433D0 /* logoFund4Scouts.png */; };
 		DF7046A023663D92005433D0 /* IconLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DF70469F23663D92005433D0 /* IconLogo.png */; };
+		DFC691EE2369C93E00F6CD51 /* privacy_policy.html in Resources */ = {isa = PBXBuildFile; fileRef = DFC691ED2369C93E00F6CD51 /* privacy_policy.html */; };
+		DFC691F02369C97500F6CD51 /* terms_and_conditions.html in Resources */ = {isa = PBXBuildFile; fileRef = DFC691EF2369C97500F6CD51 /* terms_and_conditions.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		C0CB560C1C96A3E7B1289308 /* Pods-wreathsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wreathsUITests.release.xcconfig"; path = "Target Support Files/Pods-wreathsUITests/Pods-wreathsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DF7046952366254E005433D0 /* logoFund4Scouts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoFund4Scouts.png; sourceTree = "<group>"; };
 		DF70469F23663D92005433D0 /* IconLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconLogo.png; sourceTree = "<group>"; };
+		DFC691ED2369C93E00F6CD51 /* privacy_policy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = privacy_policy.html; sourceTree = "<group>"; };
+		DFC691EF2369C97500F6CD51 /* terms_and_conditions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = terms_and_conditions.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 		A5A5A17823366A9D0060FD01 = {
 			isa = PBXGroup;
 			children = (
+				DFC691EF2369C97500F6CD51 /* terms_and_conditions.html */,
+				DFC691ED2369C93E00F6CD51 /* privacy_policy.html */,
 				A5C25CBB235CE0E6005A6905 /* Images */,
 				A5FDE5D0233B9EEC0030D90D /* CustomCells */,
 				A5A5A1B3233671BF0060FD01 /* CustomClass */,
@@ -362,9 +368,11 @@
 				A5A5A18F23366A9E0060FD01 /* LaunchScreen.storyboard in Resources */,
 				A56EEFC52338ACDE00E5848A /* GoogleService-Info.plist in Resources */,
 				A5A5A18C23366A9E0060FD01 /* Assets.xcassets in Resources */,
+				DFC691EE2369C93E00F6CD51 /* privacy_policy.html in Resources */,
 				DF7046A023663D92005433D0 /* IconLogo.png in Resources */,
 				A5A5A18A23366A9D0060FD01 /* Main.storyboard in Resources */,
 				A5C25CC3235CE10D005A6905 /* arrow.png in Resources */,
+				DFC691F02369C97500F6CD51 /* terms_and_conditions.html in Resources */,
 				DF7046962366254E005433D0 /* logoFund4Scouts.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
