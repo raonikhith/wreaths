@@ -40,6 +40,7 @@
 		DFC691F5236A707F00F6CD51 /* css in Resources */ = {isa = PBXBuildFile; fileRef = DFC691F1236A707E00F6CD51 /* css */; };
 		DFC691F7236A707F00F6CD51 /* contactus.html in Resources */ = {isa = PBXBuildFile; fileRef = DFC691F3236A707F00F6CD51 /* contactus.html */; };
 		DFC69200236A76F500F6CD51 /* contactus.md in Resources */ = {isa = PBXBuildFile; fileRef = DFC691FF236A76F500F6CD51 /* contactus.md */; };
+		DFC69202236A7B9800F6CD51 /* Privacy_Policy.md in Resources */ = {isa = PBXBuildFile; fileRef = DFC69201236A7B9800F6CD51 /* Privacy_Policy.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		DFC691F1236A707E00F6CD51 /* css */ = {isa = PBXFileReference; lastKnownFileType = folder; path = css; sourceTree = "<group>"; };
 		DFC691F3236A707F00F6CD51 /* contactus.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = contactus.html; sourceTree = "<group>"; };
 		DFC691FF236A76F500F6CD51 /* contactus.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = contactus.md; sourceTree = "<group>"; };
+		DFC69201236A7B9800F6CD51 /* Privacy_Policy.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Privacy_Policy.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 		A5A5A17823366A9D0060FD01 = {
 			isa = PBXGroup;
 			children = (
+				DFC69201236A7B9800F6CD51 /* Privacy_Policy.md */,
 				DFC691FF236A76F500F6CD51 /* contactus.md */,
 				DFC691F1236A707E00F6CD51 /* css */,
 				DFC691F3236A707F00F6CD51 /* contactus.html */,
@@ -377,6 +380,7 @@
 				DFC691F5236A707F00F6CD51 /* css in Resources */,
 				A5A5A18F23366A9E0060FD01 /* LaunchScreen.storyboard in Resources */,
 				A56EEFC52338ACDE00E5848A /* GoogleService-Info.plist in Resources */,
+				DFC69202236A7B9800F6CD51 /* Privacy_Policy.md in Resources */,
 				A5A5A18C23366A9E0060FD01 /* Assets.xcassets in Resources */,
 				DFC691EE2369C93E00F6CD51 /* privacy_policy.html in Resources */,
 				DF7046A023663D92005433D0 /* IconLogo.png in Resources */,
