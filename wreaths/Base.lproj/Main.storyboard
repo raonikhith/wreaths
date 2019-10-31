@@ -697,7 +697,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Jy2-Hd-Yrq" firstAttribute="bottom" secondItem="chp-B3-QbF" secondAttribute="bottom" id="AAP-T1-Xgh"/>
                             <constraint firstItem="Jy2-Hd-Yrq" firstAttribute="trailing" secondItem="chp-B3-QbF" secondAttribute="trailing" id="JAe-Xq-iqu"/>
@@ -761,7 +761,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Aht-YS-xWI" firstAttribute="top" secondItem="Yla-wM-VMh" secondAttribute="bottom" constant="10" id="C8D-yU-amT"/>
                                     <constraint firstAttribute="trailing" secondItem="Aht-YS-xWI" secondAttribute="trailing" constant="10" id="FwX-V0-bBK"/>
@@ -844,7 +844,7 @@
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGB-3d-yW4">
                                 <rect key="frame" x="10" y="772" width="80" height="80"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="iE5-3e-MT0"/>
@@ -855,14 +855,14 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HB7-92-CkF">
                                 <rect key="frame" x="100" y="772" width="304" height="80"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.76994523140000004" green="0.1230088828" blue="0.1659058923" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="H3l-f3-mUk" firstAttribute="leading" secondItem="XVR-JI-kzq" secondAttribute="leading" id="0UR-dn-AE2"/>
                             <constraint firstItem="XVR-JI-kzq" firstAttribute="trailing" secondItem="HB7-92-CkF" secondAttribute="trailing" constant="10" id="2Of-ik-6bX"/>
