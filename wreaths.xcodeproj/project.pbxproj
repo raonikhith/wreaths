@@ -10,6 +10,8 @@
 		297C2C5A293570B5DD844E6A /* Pods_wreaths.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDE823C518C135543C31230 /* Pods_wreaths.framework */; };
 		45EA132CF3BCE30C7B5D6678 /* Pods_wreathsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAAF84BF8CA1A7F8320A3D4 /* Pods_wreathsTests.framework */; };
 		97471518D05A19C6F405E594 /* Pods_wreathsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CAF19EA11D43C435BDD10B5 /* Pods_wreathsUITests.framework */; };
+		A518E32D236AEBFE00CFEA7D /* GenerateReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A518E32C236AEBFE00CFEA7D /* GenerateReportViewController.swift */; };
+		A518E32F236AECF600CFEA7D /* GenerateReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A518E32E236AECF600CFEA7D /* GenerateReportTableViewCell.swift */; };
 		A56EEFC52338ACDE00E5848A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A56EEFC42338ACDE00E5848A /* GoogleService-Info.plist */; };
 		A587E235235B1CFB0008047E /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A587E234235B1CFB0008047E /* OrdersViewController.swift */; };
 		A587E237235B1D7C0008047E /* OrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A587E236235B1D7C0008047E /* OrdersTableViewCell.swift */; };
@@ -33,14 +35,6 @@
 		A5FDE5CD233B9BDF0030D90D /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDE5CC233B9BDF0030D90D /* EdgeInsetLabel.swift */; };
 		A5FDE5CF233B9D740030D90D /* CreateOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDE5CE233B9D740030D90D /* CreateOrderViewController.swift */; };
 		A5FDE5D2233B9F0C0030D90D /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDE5D1233B9F0C0030D90D /* ProductTableViewCell.swift */; };
-		DF7046962366254E005433D0 /* logoFund4Scouts.png in Resources */ = {isa = PBXBuildFile; fileRef = DF7046952366254E005433D0 /* logoFund4Scouts.png */; };
-		DF7046A023663D92005433D0 /* IconLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = DF70469F23663D92005433D0 /* IconLogo.png */; };
-		DFC691EE2369C93E00F6CD51 /* privacy_policy.html in Resources */ = {isa = PBXBuildFile; fileRef = DFC691ED2369C93E00F6CD51 /* privacy_policy.html */; };
-		DFC691F02369C97500F6CD51 /* terms_and_conditions.html in Resources */ = {isa = PBXBuildFile; fileRef = DFC691EF2369C97500F6CD51 /* terms_and_conditions.html */; };
-		DFC691F5236A707F00F6CD51 /* css in Resources */ = {isa = PBXBuildFile; fileRef = DFC691F1236A707E00F6CD51 /* css */; };
-		DFC691F7236A707F00F6CD51 /* contactus.html in Resources */ = {isa = PBXBuildFile; fileRef = DFC691F3236A707F00F6CD51 /* contactus.html */; };
-		DFC69200236A76F500F6CD51 /* contactus.md in Resources */ = {isa = PBXBuildFile; fileRef = DFC691FF236A76F500F6CD51 /* contactus.md */; };
-		DFC69202236A7B9800F6CD51 /* Privacy_Policy.md in Resources */ = {isa = PBXBuildFile; fileRef = DFC69201236A7B9800F6CD51 /* Privacy_Policy.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +61,8 @@
 		4322768385BBD7F02BBC804E /* Pods-wreaths.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wreaths.release.xcconfig"; path = "Target Support Files/Pods-wreaths/Pods-wreaths.release.xcconfig"; sourceTree = "<group>"; };
 		6CAF19EA11D43C435BDD10B5 /* Pods_wreathsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wreathsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DEE6F99EA3EE789ECC2810 /* Pods-wreathsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wreathsTests.release.xcconfig"; path = "Target Support Files/Pods-wreathsTests/Pods-wreathsTests.release.xcconfig"; sourceTree = "<group>"; };
+		A518E32C236AEBFE00CFEA7D /* GenerateReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateReportViewController.swift; sourceTree = "<group>"; };
+		A518E32E236AECF600CFEA7D /* GenerateReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateReportTableViewCell.swift; sourceTree = "<group>"; };
 		A56EEFC42338ACDE00E5848A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A587E234235B1CFB0008047E /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		A587E236235B1D7C0008047E /* OrdersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewCell.swift; sourceTree = "<group>"; };
@@ -99,14 +95,6 @@
 		B1E3388A4D34574478442721 /* Pods-wreaths.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wreaths.debug.xcconfig"; path = "Target Support Files/Pods-wreaths/Pods-wreaths.debug.xcconfig"; sourceTree = "<group>"; };
 		B85C78BCCF695DB8B9A153D4 /* Pods-wreathsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wreathsUITests.debug.xcconfig"; path = "Target Support Files/Pods-wreathsUITests/Pods-wreathsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0CB560C1C96A3E7B1289308 /* Pods-wreathsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wreathsUITests.release.xcconfig"; path = "Target Support Files/Pods-wreathsUITests/Pods-wreathsUITests.release.xcconfig"; sourceTree = "<group>"; };
-		DF7046952366254E005433D0 /* logoFund4Scouts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoFund4Scouts.png; sourceTree = "<group>"; };
-		DF70469F23663D92005433D0 /* IconLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconLogo.png; sourceTree = "<group>"; };
-		DFC691ED2369C93E00F6CD51 /* privacy_policy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = privacy_policy.html; sourceTree = "<group>"; };
-		DFC691EF2369C97500F6CD51 /* terms_and_conditions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = terms_and_conditions.html; sourceTree = "<group>"; };
-		DFC691F1236A707E00F6CD51 /* css */ = {isa = PBXFileReference; lastKnownFileType = folder; path = css; sourceTree = "<group>"; };
-		DFC691F3236A707F00F6CD51 /* contactus.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = contactus.html; sourceTree = "<group>"; };
-		DFC691FF236A76F500F6CD51 /* contactus.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = contactus.md; sourceTree = "<group>"; };
-		DFC69201236A7B9800F6CD51 /* Privacy_Policy.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Privacy_Policy.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,12 +128,6 @@
 		A5A5A17823366A9D0060FD01 = {
 			isa = PBXGroup;
 			children = (
-				DFC69201236A7B9800F6CD51 /* Privacy_Policy.md */,
-				DFC691FF236A76F500F6CD51 /* contactus.md */,
-				DFC691F1236A707E00F6CD51 /* css */,
-				DFC691F3236A707F00F6CD51 /* contactus.html */,
-				DFC691EF2369C97500F6CD51 /* terms_and_conditions.html */,
-				DFC691ED2369C93E00F6CD51 /* privacy_policy.html */,
 				A5C25CBB235CE0E6005A6905 /* Images */,
 				A5FDE5D0233B9EEC0030D90D /* CustomCells */,
 				A5A5A1B3233671BF0060FD01 /* CustomClass */,
@@ -212,6 +194,7 @@
 				A5BEB602233FB0FA003C454E /* CheckOutViewController.swift */,
 				A587E234235B1CFB0008047E /* OrdersViewController.swift */,
 				A587E238235B28B40008047E /* OrderSummaryViewController.swift */,
+				A518E32C236AEBFE00CFEA7D /* GenerateReportViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -229,8 +212,6 @@
 		A5C25CBB235CE0E6005A6905 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				DF70469F23663D92005433D0 /* IconLogo.png */,
-				DF7046952366254E005433D0 /* logoFund4Scouts.png */,
 				A5C25CBF235CE10D005A6905 /* arrow.png */,
 			);
 			path = Images;
@@ -242,6 +223,7 @@
 				A5FDE5D1233B9F0C0030D90D /* ProductTableViewCell.swift */,
 				A5BEB607233FFF85003C454E /* CreateOrderTableViewCell.swift */,
 				A587E236235B1D7C0008047E /* OrdersTableViewCell.swift */,
+				A518E32E236AECF600CFEA7D /* GenerateReportTableViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -337,7 +319,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1030;
-				ORGANIZATIONNAME = TechnisarInc;
+				ORGANIZATIONNAME = NFCIndia;
 				TargetAttributes = {
 					A5A5A18023366A9D0060FD01 = {
 						CreatedOnToolsVersion = 10.3;
@@ -377,19 +359,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFC691F5236A707F00F6CD51 /* css in Resources */,
 				A5A5A18F23366A9E0060FD01 /* LaunchScreen.storyboard in Resources */,
 				A56EEFC52338ACDE00E5848A /* GoogleService-Info.plist in Resources */,
-				DFC69202236A7B9800F6CD51 /* Privacy_Policy.md in Resources */,
 				A5A5A18C23366A9E0060FD01 /* Assets.xcassets in Resources */,
-				DFC691EE2369C93E00F6CD51 /* privacy_policy.html in Resources */,
-				DF7046A023663D92005433D0 /* IconLogo.png in Resources */,
 				A5A5A18A23366A9D0060FD01 /* Main.storyboard in Resources */,
 				A5C25CC3235CE10D005A6905 /* arrow.png in Resources */,
-				DFC691F7236A707F00F6CD51 /* contactus.html in Resources */,
-				DFC691F02369C97500F6CD51 /* terms_and_conditions.html in Resources */,
-				DF7046962366254E005433D0 /* logoFund4Scouts.png in Resources */,
-				DFC69200236A76F500F6CD51 /* contactus.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A518E32F236AECF600CFEA7D /* GenerateReportTableViewCell.swift in Sources */,
 				A5C25CC5235CE3CC005A6905 /* PKButton.swift in Sources */,
 				A5BEB603233FB0FA003C454E /* CheckOutViewController.swift in Sources */,
 				A5FDE5C9233B46790030D90D /* BaseViewController.swift in Sources */,
@@ -516,6 +491,7 @@
 				A587E239235B28B40008047E /* OrderSummaryViewController.swift in Sources */,
 				A5A5A1B9233675920060FD01 /* SignUpViewController.swift in Sources */,
 				A5A5A18523366A9D0060FD01 /* AppDelegate.swift in Sources */,
+				A518E32D236AEBFE00CFEA7D /* GenerateReportViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,7 +597,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -676,7 +652,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -691,7 +667,6 @@
 			baseConfigurationReference = B1E3388A4D34574478442721 /* Pods-wreaths.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3KJ8X7N93A;
 				INFOPLIST_FILE = wreaths/Info.plist;
@@ -699,9 +674,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.funds4scouts;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.wreaths;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -712,7 +686,6 @@
 			baseConfigurationReference = 4322768385BBD7F02BBC804E /* Pods-wreaths.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3KJ8X7N93A;
 				INFOPLIST_FILE = wreaths/Info.plist;
@@ -720,9 +693,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.funds4scouts;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.wreaths;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

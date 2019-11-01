@@ -41,7 +41,7 @@ class DashBoardViewController: BaseViewController {
         super.viewDidLoad()
 
         
-        self.title = "Home"
+        self.title = "Wreath"
         
         //configurations
       
@@ -95,7 +95,7 @@ class DashBoardViewController: BaseViewController {
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                if querySnapshot!.documents.count>=0
+                if querySnapshot!.documents.count>0
                 {
                 for document in querySnapshot!.documents {
                     print("\(document.documentID) => \(document.data())")
@@ -162,12 +162,15 @@ class DashBoardViewController: BaseViewController {
     
     //method to generate the reports
     @IBAction func generateReport(_ sender: Any) {
-        if(Float(self.totalSum.value) > 0.0 ){
-        self.performSegue(withIdentifier:"generateSegue", sender:nil)
-        }
-        else{
-            alert_popup(title: "No Sales", message: "Currently there are no orders available")
-        }
+        //ordersSegue
+        //generateSegue
+self.performSegue(withIdentifier:"generateSegue", sender:nil)
+        
+    }
+    
+    
+    @IBAction func generateReportAction(_ sender: Any) {
+        self.performSegue(withIdentifier:"ordersSegue", sender:nil)
     }
     
     

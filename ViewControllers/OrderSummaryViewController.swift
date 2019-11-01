@@ -73,7 +73,7 @@ extension OrderSummaryViewController:UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:"coCell") as! CreateOrderTableViewCell
         cell.pnameLbl.text = self.oderArrayItems[indexPath.row]["pName"].stringValue
-        cell.qtyLbl.text =  "X"+self.oderArrayItems[indexPath.row]["Qty"].stringValue
+        cell.qtyLbl.text =  "x"+self.oderArrayItems[indexPath.row]["Qty"].stringValue
         cell.priceLabel.text = "$ \(self.oderArrayItems[indexPath.row]["Qty"].intValue*self.oderArrayItems[indexPath.row]["Price"].intValue)"
         cell.selectionStyle = .none
         return cell

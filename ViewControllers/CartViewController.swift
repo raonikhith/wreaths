@@ -20,14 +20,21 @@ class CartViewController: BaseViewController {
     
     
     var price = Int()
+    var qty = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        for i in 0..<self.cartObjects.count
+        /*for i in 0..<self.cartObjects.count
         {
             price += self.cartObjects[i]["Qty"].intValue*self.cartObjects[i]["Price"].intValue
+        }
+        totalPrice.text = "$ \(price)"*/
+        
+        for i in 0..<self.cartObjects.count
+        {
+            price += qty[i]*self.cartObjects[i]["Price"].intValue
         }
         totalPrice.text = "$ \(price)"
         
@@ -59,6 +66,7 @@ class CartViewController: BaseViewController {
         let vc = segue.destination as! CheckOutViewController
         vc.cartObjects = self.cartObjects
         vc.totalPrice = price
+         vc.qty = qty
 //        vc.cash = cashTF.text!
 //        vc.credit = creditTf.text!
     }
@@ -75,8 +83,14 @@ extension CartViewController:UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:"coCell") as! CreateOrderTableViewCell
         cell.pnameLbl.text = self.cartObjects[indexPath.row]["pName"].stringValue
-        cell.qtyLbl.text =  "X"+self.cartObjects[indexPath.row]["Qty"].stringValue
-        cell.priceLabel.text = "$ \(self.cartObjects[indexPath.row]["Qty"].intValue*self.cartObjects[indexPath.row]["Price"].intValue)"
+//        cell.qtyLbl.text =  "x"+self.cartObjects[indexPath.row]["Qty"].stringValue
+//        cell.priceLabel.text = "$ \(self.cartObjects[indexPath.row]["Qty"].intValue*self.cartObjects[indexPath.row]["Price"].intValue)"
+        
+        cell.qtyLbl.text =  "x\(qty[indexPath.row])"
+               cell.priceLabel.text = "$ \(qty[indexPath.row]*self.cartObjects[indexPath.row]["Price"].intValue)"
+        
+        
+        
         cell.selectionStyle = .none
         return cell
     }

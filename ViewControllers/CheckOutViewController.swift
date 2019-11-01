@@ -33,6 +33,7 @@ class CheckOutViewController: BaseViewController
 //    var cash = String()
 //    var credit = String()
     var state = String()
+    var qty = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,11 +80,17 @@ class CheckOutViewController: BaseViewController
             {
                 if isValidEmail(email:emailTF.text!)
                 {
+                    
+                    for i in 0..<qty.count
+                       {
+                           self.cartObjects[i].dictionaryObject!["Qty"] = qty[i]
+                       }
                     var carts = [[String:Any]]()
                     for c in 0..<self.cartObjects.count
                     {
                         carts.append(self.cartObjects[c].dictionaryObject!)
                     }
+                    
                     let userDetails = ["Name":nameTF.text!,"Mobile":mobileTF.text!,"Email":emailTF.text!,"Address":addressTF.text!,"City":cityTF.text!,"State":state,"ZipCode":zipCodeTF.text!,"Price":totalPrice] as [String : Any]
                     cart = ["UserDetails":userDetails,
                             "OrderDetails":carts]

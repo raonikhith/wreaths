@@ -7,11 +7,19 @@
 //
 
 import UIKit
+import ValueStepper
 
 class ProductTableViewCell: UITableViewCell {
 
     @IBOutlet weak var pNameLbl: UILabel!
     @IBOutlet weak var priceLbl: UILabel!
+    
+   
+    
+    @IBOutlet weak var stepperView: UIView!
+    
+    @IBOutlet weak var valueLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,5 +31,6 @@ class ProductTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+   
 }
