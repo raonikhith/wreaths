@@ -35,6 +35,7 @@
 		A5FDE5CD233B9BDF0030D90D /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDE5CC233B9BDF0030D90D /* EdgeInsetLabel.swift */; };
 		A5FDE5CF233B9D740030D90D /* CreateOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDE5CE233B9D740030D90D /* CreateOrderViewController.swift */; };
 		A5FDE5D2233B9F0C0030D90D /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FDE5D1233B9F0C0030D90D /* ProductTableViewCell.swift */; };
+		DF135606236D385700B1F9DA /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = DF135605236D385700B1F9DA /* AppIcon.appiconset */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		B1E3388A4D34574478442721 /* Pods-wreaths.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wreaths.debug.xcconfig"; path = "Target Support Files/Pods-wreaths/Pods-wreaths.debug.xcconfig"; sourceTree = "<group>"; };
 		B85C78BCCF695DB8B9A153D4 /* Pods-wreathsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wreathsUITests.debug.xcconfig"; path = "Target Support Files/Pods-wreathsUITests/Pods-wreathsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0CB560C1C96A3E7B1289308 /* Pods-wreathsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wreathsUITests.release.xcconfig"; path = "Target Support Files/Pods-wreathsUITests/Pods-wreathsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DF135605236D385700B1F9DA /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 		A5C25CBB235CE0E6005A6905 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DF135605236D385700B1F9DA /* AppIcon.appiconset */,
 				A5C25CBF235CE10D005A6905 /* arrow.png */,
 			);
 			path = Images;
@@ -363,6 +366,7 @@
 				A56EEFC52338ACDE00E5848A /* GoogleService-Info.plist in Resources */,
 				A5A5A18C23366A9E0060FD01 /* Assets.xcassets in Resources */,
 				A5A5A18A23366A9D0060FD01 /* Main.storyboard in Resources */,
+				DF135606236D385700B1F9DA /* AppIcon.appiconset in Resources */,
 				A5C25CC3235CE10D005A6905 /* arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
