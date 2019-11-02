@@ -41,7 +41,7 @@ class DashBoardViewController: BaseViewController {
         super.viewDidLoad()
 
         
-        self.title = "Wreath"
+        self.title = "Wreaths"
         
         //configurations
       
